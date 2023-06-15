@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Adventour - Book Now</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+    
+    section {
+      padding: 20px;
+    }
+    
+    h2 {
+      color: #333;
+    }
+    
+    .booking-form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    
+    .form-group button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .form-group button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Adventour</h1>
+    <p>Unleash Your Inner Adventurer</p>
+  </header>
+  
+  <section>
+    <h2>Book Now</h2>
+    
+    <div class="booking-form">
+      <form>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="destination">Destination</label>
+          <select id="destination" name="destination" required>
+            <option value="">Select Destination</option>
+            <option value="mountain">Mountain Expedition</option>
+            <option value="jungle">Jungle Adventure</option>
+            <option value="desert">Desert Safari</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Additional Message</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <button type="submit">Submit Booking</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
