@@ -1,73 +1,84 @@
-let arr = [
+let arr2 = [
   {
-    price: "$35/person",
-    location: "Bali, Indonasia",
-    time: "7 Days Bali and Gili Islands Epid Experience",
+    head: "Memorable Trip",
+    msg: "This is a realyy memorable trip for me. Utenim ad minimveniam,nosturd exercit tation ullamco laboris nisi ut aliquip exa    comando consequat aute irure sint.",
     img: "https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779",
+    pro: "Jennifer Doe influencer<",
   },
   {
-    price: "$35/person",
-    location: "Bali, Indonasia",
-    time: "7 Days Bali and Gili Islands Epid Experience",
+    head: "Memorable Trip",
+    msg: "This is a realyy memorable trip for me. Utenim ad minimveniam,nosturd exercit tation ullamco laboris nisi ut aliquip exa    comando consequat aute irure sint.",
     img: "https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779",
+    pro: "Jennifer Doe influencer<",
   },
   {
-    price: "$35/person",
-    location: "Bali, Indonasia",
-    time: "7 Days Bali and Gili Islands Epid Experience",
+    head: "Memorable Trip",
+    msg: "This is a realyy memorable trip for me. Utenim ad minimveniam,nosturd exercit tation ullamco laboris nisi ut aliquip exa    comando consequat aute irure sint.",
     img: "https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779",
+    pro: "Jennifer Doe influencer<",
   },
   {
-    price: "$35/person",
-    location: "Bali, Indonasia",
-    time: "7 Days Bali and Gili Islands Epid Experience",
+    head: "Memorable Trip",
+    msg: "This is a realyy memorable trip for me. Utenim ad minimveniam,nosturd exercit tation ullamco laboris nisi ut aliquip exa    comando consequat aute irure sint.",
     img: "https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779",
+    pro: "Jennifer Doe influencer<",
   },
   {
-    price: "$35/person",
-    location: "Bali, Indonasia",
-    time: "7 Days Bali and Gili Islands Epid Experience",
+    head: "Memorable Trip",
+    msg: "This is a realyy memorable trip for me. Utenim ad minimveniam,nosturd exercit tation ullamco laboris nisi ut aliquip exa    comando consequat aute irure sint.",
     img: "https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779",
+    pro: "Jennifer Doe influencer<",
   },
-  {
-    price: "$35/person",
-    location: "Bali, Indonasia",
-    time: "7 Days Bali and Gili Islands Epid Experience",
-    img: "https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779",
-  },
-  {
-    price: "$35/person",
-    location: "Bali, Indonasia",
-    time: "7 Days Bali and Gili Islands Epid Experience",
-    img: "https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779",
-  }
 ];
-let LS = [];
-let photo = document.getElementById("photo");
-let cont = document.getElementById("cont");
-function Display(data) {
-  cont.innerHTML = ""; // null
+<div>
+  <div>
+    <img src="kdsam0" />
+    <p>Jennifer Doe influencer</p>
+  </div>
+</div>;
+let photo2 = document.getElementById("photo");
+
+let one = document.getElementById("one");
+let two = document.getElementById("two");
+let index = 0;
+
+function display(data) {
+  photo.innerHTML = "";
   for (let i = 0; i < data.length; i++) {
-    let cart2 = document.createElement("div");
+    let cart3 = document.createElement("div");
+    cart3.classList.add("photo-item");
 
-    let image = document.createElement("img");
-    image.setAttribute("src", data[i].img);
+    let img = document.createElement("img");
+    img.setAttribute("src", data[i].img);
 
-    let time = document.createElement("p");
-    time.innerText = data[i].time;
+    let msg = document.createElement("p");
+    msg.innerText = data[i].msg;
 
-    let location = document.createElement("p");
-    location.innerText = data[i].location;
+    let head = document.createElement("p");
+    head.innerText = data[i].head;
 
-    let price = document.createElement("p");
-    price.innerText = data[i].price;
-   
+    let pro = document.createElement("p");
+    pro.innerText = data[i].pro;
 
-    cart2.append(image, time, location, price);
-
-    photo.append(cart2);
-    cont.append(photo);
+    cart3.append(head, msg,img,pro);
+    photo2.append(cart3);
   }
 }
 
-Display(arr);
+function text(n) {
+  index += n;
+  let slides = document.getElementsByClassName("photo-item");
+
+  if (index > slides.length - 1) {
+    index = 0;
+  } else if (index < 0) {
+    index = slides.length - 1;
+  }
+
+  photo2.scrollLeft = slides[index].offsetLeft;
+}
+
+zero.addEventListener("click", () => text(-1));
+one.addEventListener("click", () => text(0));
+
+display(arr2);

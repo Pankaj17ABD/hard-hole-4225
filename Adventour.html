@@ -100,17 +100,12 @@
       justify-content: space-between;
       padding-bottom: 50px;
     }
-    #mid :nth-child(1) {
-      width: 50%;
-      font-size: 30px;
-    }
+
     #mid > h1 {
       font-size: 30px;
     }
-    #mid :nth-child(2) {
-      width: 50%;
+    .btn {
       display: flex;
-      justify-content: space-between;
     }
     #mid button {
       font-size: 50px;
@@ -226,6 +221,37 @@
       color: white;
       text-decoration: none;
     }
+    #photo {
+      display: flex;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+    }
+
+    .photo-item {
+      flex: 0 0 auto;
+      width: 300px;
+      margin-right: 20px;
+    }
+
+    .photo-item img {
+      width: 100%;
+    }
+    #photo2 {
+      display: flex;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+    }
+
+    .photo-item {
+      flex: 0 0 auto;
+      width: 300px;
+      margin-right: 20px;
+      padding: 20px;
+    }
+
+    .photo-item img {
+      width: 15%;
+    }
   </style>
   <body>
     <div id="nav">
@@ -272,9 +298,9 @@
         <div>
           <h1>Wonderlist for Your Woderlust</h1>
         </div>
-        <div>
-          <button><</button>
-          <button>></button>
+        <div class="btn">
+          <button id="prevBtn"><</button>
+          <button id="nextBtn">></button>
         </div>
       </div>
       <div id="photo"></div>
@@ -297,10 +323,11 @@
           <p>Sed ut perspiciats unde omnis iste natus.</p>
         </div>
         <div id="two">
-         
-           <a href="best.html">
-            <img  src="https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779"
-             alt="Description of the image">
+          <a href="best.html">
+            <img
+              src="https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779"
+              alt="Description of the image"
+            />
           </a>
           <p>Best Tour Guide</p>
           <p>Sed ut perspiciats unde omnis iste natus.</p>
@@ -362,49 +389,12 @@
           <div>
             <h1>Our Coustmers Say About Us</h1>
           </div>
-          <div>
-            <button><</button>
-            <button>></button>
+          <div class="btn">
+            <button id="one"><</button>
+            <button id="zero">></button>
           </div>
         </div>
-        <div id="photo">
-          <div>
-            <h3>"Memorable Trip"</h3>
-            <p>
-              This is a realyy memorable trip for me. Utenim ad minim
-              veniam,nosturd exercit tation ullamco laboris nisi ut aliquip exa
-              comando consequat aute irure sint.
-            </p>
-            <div>
-              <img src="kdsam0" />
-              <p>Jennifer Doe influencer</p>
-            </div>
-          </div>
-          <div>
-            <h3>"Memorable Trip"</h3>
-            <p>
-              This is a realyy memorable trip for me. Utenim ad minim
-              veniam,nosturd exercit tation ullamco laboris nisi ut aliquip exa
-              comando consequat aute irure sint.
-            </p>
-            <div>
-              <img src="kdsam0" />
-              <p>Jennifer Doe influencer</p>
-            </div>
-          </div>
-          <div>
-            <h3>"Memorable Trip"</h3>
-            <p>
-              This is a realyy memorable trip for me. Utenim ad minim
-              veniam,nosturd exercit tation ullamco laboris nisi ut aliquip exa
-              comando consequat aute irure sint.
-            </p>
-            <div>
-              <img src="kdsam0" />
-              <p>Jennifer Doe influencer</p>
-            </div>
-          </div>
-        </div>
+        <div id="photo2"></div>
       </div>
     </div>
 
@@ -488,4 +478,174 @@
   </body>
 </html>
 
-<script src="./home.js"></script>
+<script>
+  let arr = [
+    {
+      price: "$35/person",
+      location: "Bali, Indonasia",
+      time: "7 Days Bali and Gili Islands Epid Experience",
+      img: "https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779",
+    },
+    {
+      price: "$35/person",
+      location: "Bali, Indonasia",
+      time: "7 Days Bali and Gili Islands Epid Experience",
+      img: "https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779",
+    },
+    {
+      price: "$35/person",
+      location: "Bali, Indonasia",
+      time: "7 Days Bali and Gili Islands Epid Experience",
+      img: "https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779",
+    },
+    {
+      price: "$35/person",
+      location: "Bali, Indonasia",
+      time: "7 Days Bali and Gili Islands Epid Experience",
+      img: "https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779",
+    },
+    {
+      price: "$35/person",
+      location: "Bali, Indonasia",
+      time: "7 Days Bali and Gili Islands Epid Experience",
+      img: "https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779",
+    },
+    {
+      price: "$35/person",
+      location: "Bali, Indonasia",
+      time: "7 Days Bali and Gili Islands Epid Experience",
+      img: "https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779",
+    },
+    {
+      price: "$35/person",
+      location: "Bali, Indonasia",
+      time: "7 Days Bali and Gili Islands Epid Experience",
+      img: "https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779",
+    },
+  ];
+  let photo = document.getElementById("photo");
+  let cont = document.getElementById("cont");
+  let prevBtn = document.getElementById("prevBtn");
+  let nextBtn = document.getElementById("nextBtn");
+  let slideIndex = 0;
+
+  function Display(data) {
+    photo.innerHTML = "";
+    for (let i = 0; i < data.length; i++) {
+      let cart2 = document.createElement("div");
+      cart2.classList.add("photo-item");
+
+      let image = document.createElement("img");
+      image.setAttribute("src", data[i].img);
+
+      let time = document.createElement("p");
+      time.innerText = data[i].time;
+
+      let location = document.createElement("p");
+      location.innerText = data[i].location;
+
+      let price = document.createElement("p");
+      price.innerText = data[i].price;
+
+      cart2.append(image, time, location, price);
+      photo.append(cart2);
+    }
+  }
+
+  function showSlides(n) {
+    slideIndex += n;
+    let slides = document.getElementsByClassName("photo-item");
+
+    if (slideIndex > slides.length - 1) {
+      slideIndex = 0;
+    } else if (slideIndex < 0) {
+      slideIndex = slides.length - 1;
+    }
+
+    photo.scrollLeft = slides[slideIndex].offsetLeft;
+  }
+
+  prevBtn.addEventListener("click", () => showSlides(-1));
+  nextBtn.addEventListener("click", () => showSlides(1));
+
+  Display(arr);
+  let arr2 = [
+    {
+      head: "Memorable Trip",
+      msg: "This is a realyy memorable trip for me. Utenim ad minimveniam,nosturd exercit tation ullamco laboris nisi ut aliquip exa    comando consequat aute irure sint.",
+      img: "https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779",
+      pro: "Jennifer Doe influencer<",
+    },
+    {
+      head: "Memorable Trip",
+      msg: "This is a realyy memorable trip for me. Utenim ad minimveniam,nosturd exercit tation ullamco laboris nisi ut aliquip exa    comando consequat aute irure sint.",
+      img: "https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779",
+      pro: "Jennifer Doe influencer<",
+    },
+    {
+      head: "Memorable Trip",
+      msg: "This is a realyy memorable trip for me. Utenim ad minimveniam,nosturd exercit tation ullamco laboris nisi ut aliquip exa    comando consequat aute irure sint.",
+      img: "https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779",
+      pro: "Jennifer Doe influencer<",
+    },
+    {
+      head: "Memorable Trip",
+      msg: "This is a realyy memorable trip for me. Utenim ad minimveniam,nosturd exercit tation ullamco laboris nisi ut aliquip exa    comando consequat aute irure sint.",
+      img: "https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779",
+      pro: "Jennifer Doe influencer<",
+    },
+    {
+      head: "Memorable Trip",
+      msg: "This is a realyy memorable trip for me. Utenim ad minimveniam,nosturd exercit tation ullamco laboris nisi ut aliquip exa    comando consequat aute irure sint.",
+      img: "https://cdn.dribbble.com/users/8689057/avatars/small/ec04f5d4caa3824816339ece1bf074a3.png?1673421779",
+      pro: "Jennifer Doe influencer<",
+    },
+  ];
+
+  let photo2 = document.getElementById("photo2");
+
+  let one = document.getElementById("one");
+  let two = document.getElementById("two");
+  let index = 0;
+
+  function display(data) {
+    photo2.innerHTML = "";
+    for (let i = 0; i < data.length; i++) {
+      let cart3 = document.createElement("div");
+      cart3.classList.add("photo-item");
+
+      let img1 = document.createElement("img");
+      img1.setAttribute("src", data[i].img);
+
+      let msg = document.createElement("p");
+      msg.innerText = data[i].msg;
+
+      let head = document.createElement("p");
+      head.innerText = data[i].head;
+
+      let pro = document.createElement("p");
+      pro.innerText = data[i].pro;
+
+      cart3.append(head, msg, img1, pro);
+      photo2.append(cart3);
+    }
+  }
+
+  function text(n) {
+    index += n;
+    let slides = document.getElementsByClassName("photo-item");
+
+    if (index > slides.length - 1) {
+      index = 0;
+    } else if (index < 0) {
+      index = slides.length - 1;
+    }
+
+    photo2.scrollLeft = slides[index].offsetLeft;
+  }
+
+  zero.addEventListener("click", () => text(-1));
+  one.addEventListener("click", () => text(0));
+
+  display(arr2);
+</script>
