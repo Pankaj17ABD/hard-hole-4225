@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Buy Tickets - Adventour</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f1f1f1;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+        color: #333;
+      }
+
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      input[type="text"],
+      input[type="email"],
+      select,
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Buy Tickets - Adventour</h1>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+
+      <label for="ticket-type">Ticket Type:</label>
+      <select id="ticket-type" required>
+        <option value="">Select Ticket Type</option>
+        <option value="standard">Standard-Rs20000</option>
+        <option value="vip">VIP-Rs30000</option>
+        <option value="premium">Premium-Rs50000</option>
+      </select>
+
+      <label>Quantity:</label>
+      <input type="number" id="quantity" min="1" required />
+
+      <input type="submit" value="Buy Tickets" />
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+    <h2 id="head"></h2>
+  </body>
+  <script>
+    let quan = document.getElementById("quantity");
+    let ticket = document.getElementById("ticket-type");
+    let head = document.getElementById("head");
+    let name = document.getElementById("name");
+    let form = document.querySelector("form");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (ticket.value == "standard") {
+        head.innerText =
+          name.value +
+          "You have purchased " +
+          quan.value +
+          " tickets and Your total Price: " +
+          quan.value * 20000;
+      } else if (ticket.value == "vip") {
+        head.innerText =
+          name.value +
+          "You have purchased " +
+          quan.value +
+          " tickets and Your total Price: " +
+          quan.value * 30000;
+      } else if (ticket.value == "premium") {
+        head.innerText =
+          name.value +
+          "You have purchased " +
+          quan.value +
+          " tickets and Your total Price: " +
+          quan.value * 50000;
+      } else {
+        head.innerText = "Please select a ticket type.";
+      }
+    });
+  </script>
+</html>

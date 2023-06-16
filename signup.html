@@ -6,27 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign up Page</title>
     <style>
-      /* Write all necessery css here  */
+      body {
+        width: 90%;
+        margin: auto;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+        color: #333;
+      }
+
+      form {
+        max-width: 300px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      #inf {
+        text-align: center;
+        margin-top: 20px;
+        color: #555;
+      }
+
+      #signin-link,
+      #user-link {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        color: #666;
+        text-decoration: none;
+      }
     </style>
   </head>
 
   <body>
-    
-     
-     <p> <a href="./Adventour.html"><h3>Back to Home Page</h3></a></p>
-    
+    <p>
+      <a href="./Adventour.html"><h3>Back to Home Page</h3></a>
+    </p>
+
     <div id="signup">
       <h1 id="head">Please Enter Your Details</h1>
       <form>
         <input type="text" id="name" placeholder="name" />
-        <input type="email" id="email" placeholder="email"/>
-        <input type="password" id="password" placeholder="password"/>
-        <input type="submit" value="Submit"/>
+        <input type="email" id="email" placeholder="email" />
+        <input type="password" id="password" placeholder="password" />
+        <input type="submit" value="Submit" />
       </form>
-      <br>
-      <br>
-      <br>
-      <br>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <p id="after">lkjl</p>
       <a id="user" href="./signin.html">SIGN IN</a>
     </div>
@@ -45,10 +100,10 @@
       let data = { name: name.value, email: email.value, password: pass.value };
       arr.push(data);
       localStorage.setItem("account-data", JSON.stringify(arr));
-      head.innerText="Sign up Succesfully"
+      head.innerText = "Sign up Succesfully";
     });
-    if( head.innerText="Sign up Succesfully"){
-after.innerText="Here you can go to sign in page "
+    if ((head.innerText = "Sign up Succesfully")) {
+      after.innerText = "Here you can go to sign in page ";
     }
   </script>
 </html>
